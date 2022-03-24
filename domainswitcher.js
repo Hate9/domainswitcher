@@ -5,12 +5,7 @@ var urlparse = function(url) {
 }
 
 var matchedDomain = function(url) {
-  var domain = urlparse(url).host
-  // XXX make this config. Not everyone works on mozilla websites.
-  if (/(allizom|mozilla)\.(org|com)$/.test(domain)) {
-    return true
-  }
-  return false
+  return true
 }
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
